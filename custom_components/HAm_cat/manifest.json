@@ -1,8 +1,8 @@
 {
   "domain": "HAm_cat",
-  "name": "Hamlib CAT (ham radio)",
+  "name": "CAT control via Serial Proxy (ham radio)",
   "after_dependencies": ["esphome", "usb"],
-  "codeowners": [],
+  "codeowners": ["@R4D4R"],
   "config_flow": true,
   "documentation": "https://github.com/your-github/HAm_cat",
   "integration_type": "device",
