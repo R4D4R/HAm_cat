@@ -1,4 +1,4 @@
-# Hamlib CAT for Home Assistant
+# Hamlib-based CAT for Home Assistant
 
 Shows your ham radio's **frequency**, **mode** and **band** as Home Assistant sensors. It reads them over a **Home Assistant Connect AUX-2** RS-232 port (an ESPHome serial proxy), a USB CAT cable, a `socket://` serial server, or a Hamlib `rigctld`.  This project borrows heavily from hamlib.
 
