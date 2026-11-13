@@ -1,5 +1,5 @@
 {
-  "domain": "HAm_cat",
+  "domain": "ham_cat",
   "name": "CAT control via Serial Proxy (ham radio)",
   "after_dependencies": ["esphome", "usb"],
   "codeowners": ["@R4D4R"],
