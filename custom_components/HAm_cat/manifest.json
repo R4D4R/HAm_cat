@@ -1,0 +1,13 @@
+{
+  "domain": "HAm_cat",
+  "name": "Hamlib CAT (ham radio)",
+  "after_dependencies": ["esphome", "usb"],
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://github.com/your-github/HAm_cat",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/your-github/HAm_cat/issues",
+  "requirements": ["serialx"],
+  "version": "0.1.0"
+}

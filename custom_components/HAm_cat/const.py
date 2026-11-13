@@ -1,0 +1,35 @@
+"""Constants for the Hamlib CAT integration."""
+
+from __future__ import annotations
+
+DOMAIN = "HAm_cat"
+
+CONF_CONNECTION = "connection"
+CONF_SERIAL_PORT = "serial_port"
+CONF_PROTOCOL = "protocol"
+CONF_BAUDRATE = "baudrate"
+CONF_CIV_ADDRESS = "civ_address"
+CONF_SCAN_INTERVAL = "scan_interval"
+
+CONNECTION_SERIAL = "serial"
+CONNECTION_RIGCTLD = "rigctld"
+
+PROTOCOL_KENWOOD = "kenwood"
+PROTOCOL_YAESU_NEWCAT = "yaesu_newcat"
+PROTOCOL_YAESU_LEGACY = "yaesu_legacy"
+PROTOCOL_ICOM_CIV = "icom_civ"
+PROTOCOL_RIGCTLD = "rigctld"
+
+SERIAL_PROTOCOLS = [
+    PROTOCOL_KENWOOD,
+    PROTOCOL_YAESU_NEWCAT,
+    PROTOCOL_YAESU_LEGACY,
+    PROTOCOL_ICOM_CIV,
+]
+
+BAUDRATES = ["4800", "9600", "19200", "38400", "57600", "115200"]
+DEFAULT_BAUDRATE = "9600"
+DEFAULT_CIV_ADDRESS = "94"  # IC-7300; IC-705 = A4, IC-7610 = 98, IC-9700 = A2
+DEFAULT_RIGCTLD_PORT = 4532
+DEFAULT_SCAN_INTERVAL = 1.0
+MIN_SCAN_INTERVAL = 0.5

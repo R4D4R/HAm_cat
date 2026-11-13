@@ -1,0 +1,78 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect your radio",
+        "description": "How is the radio connected to Home Assistant?",
+        "menu_options": {
+          "serial": "Serial port (Connect AUX-2 RS-232, USB cable or socket://)",
+          "rigctld": "Hamlib rigctld over the network"
+        }
+      },
+      "serial": {
+        "title": "Serial CAT connection",
+        "description": "Pick the Connect AUX-2 port (listed under Serial proxies). Set the radio's CAT baud rate to match, and turn off RTS/CTS handshaking on the radio: the AUX-2 jack carries only TX, RX and ground.",
+        "data": {
+          "name": "Name",
+          "serial_port": "Serial port",
+          "protocol": "Radio protocol",
+          "baudrate": "Baud rate",
+          "civ_address": "Icom CI-V address (hex)"
+        },
+        "data_description": {
+          "civ_address": "Only used for Icom. IC-7300 = 94, IC-705 = A4, IC-7610 = 98, IC-9700 = A2, IC-7100 = 88."
+        }
+      },
+      "rigctld": {
+        "title": "Hamlib rigctld",
+        "description": "Connect to a running rigctld, for radios this integration doesn't speak natively.",
+        "data": {
+          "name": "Name",
+          "host": "Host",
+          "port": "Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No reply from the radio. Check the port, protocol, baud rate, cable, and that the radio is on.",
+      "invalid_civ_address": "Enter a hex address such as 94.",
+      "unknown": "Unexpected error, see the log."
+    },
+    "abort": {
+      "already_configured": "This radio is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling",
+        "data": {
+          "scan_interval": "Poll interval"
+        }
+      }
+    }
+  },
+  "selector": {
+    "protocol": {
+      "options": {
+        "kenwood": "Kenwood / Elecraft / Flex (FA; MD;)",
+        "yaesu_newcat": "Yaesu CAT: FT-991, FT-891, FT-710, FTDX10/101",
+        "yaesu_legacy": "Yaesu legacy binary: FT-817/818/857/897",
+        "icom_civ": "Icom CI-V: IC-7300, IC-705, IC-7610, IC-9700"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "frequency": {
+        "name": "Frequency"
+      },
+      "mode": {
+        "name": "Mode"
+      },
+      "band": {
+        "name": "Band"
+      }
+    }
+  }
+}
