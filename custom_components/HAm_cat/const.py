@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-DOMAIN = "HAm_cat"
+DOMAIN = "ham_cat"
 
 CONF_CONNECTION = "connection"
 CONF_SERIAL_PORT = "serial_port"
